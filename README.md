@@ -82,3 +82,27 @@ The program structure has been improved for better organization:
 - SQLite (for databases)
 - Socket Programming (for real-time communication)
 
+## 📷 Screenshots and Diagrams
+
+### UML Diagram
+![Messenger_diagram](https://github.com/user-attachments/assets/3a390ab2-9207-4e36-a7c5-ff233d50f7aa)
+
+### Application Screenshots
+
+#### Main Menu 
+<img src="https://github.com/user-attachments/assets/d213f8c5-452f-4f2e-8edb-cfe93ae7cdc7" alt="Chat Interface" width="400">
+
+#### Login succsessful
+<img src="https://github.com/user-attachments/assets/5f5376e6-df4d-45ef-8bc0-17fd41358ea1" alt="Registration Page" width="400">
+
+#### Registration failed
+<img src="https://github.com/user-attachments/assets/dff295af-c134-4ed7-b97f-0b9a41bd40dd" alt="Password Reset Page" width="400">
+
+#### Registration  succsessful
+<img src="https://github.com/user-attachments/assets/57c792d1-58b5-47f4-a9ee-cdda3ffbd6a2" alt="Logout Confirmation" width="400">
+
+#### Change password
+<img src="https://github.com/user-attachments/assets/fcd60e53-5134-4ff1-8ff8-170af723e5e3" alt="Emoji Selection" width="400">
+
+#### Chat Window
+<img src="https://github.com/user-attachments/assets/3dc41a4d-65ff-46a0-ae70-f756586c3148" alt="Login Page" width="400">
