@@ -48,8 +48,15 @@ class Client_Messenger():
         self.fromLoginScreen = Login_Screen(mainMenu, guiCommand)
         self.s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-        self.s.connect((host,port))
+        self.get_IPAddr()
         
+        if self.hostname:
+            self.s.connect((self.hostname,port))
+            print(f"[MESS][CONN][INFO]: Conectat dinamic:{self.hostname}")
+        else:
+            self.s.connect((host,port))
+            print(f"[MESS][CONN][INFO]: Conectat static:{host}")
+
         self.nume_in_aplicatie = username
         self.nume_sv_fisiere = username
 
@@ -77,6 +84,7 @@ class Client_Messenger():
         self.IPAddr=socket.gethostbyname(socket.gethostname())              # Adresa IP a calculatorului
         print("Your Computer Name is:"+self.hostname)   
         print("Your Computer IP Address is:"+self.IPAddr) 
+        time.sleep(2)
         
     #*************************************_PARTE_GRAFICA_CHAT_**************************************************#
     def parte_grafica_chat(self):
@@ -858,9 +866,16 @@ if __name__ == '__main__':
                 print('[MAIN][ERROR]:Aplicatia nu a putut porni!')
                 dbConnection.connection.close()
                 exit(1)
+                
     except Error as e:
         print(f"[MAIN][SQLLITE][ERROR]:Eroare la conectare cu baza de date {e}<!>")
         print('[MAIN][ERROR]:Aplicatia nu a putut porni!')
         dbConnection.connection.close()
         threading.Thread(target=sys.exit, args=(1,)).start()   # Create a thread that calls sys.exit(1)
         exit(1)
+        
+    finally:
+        dbConnection.connection.close()
+        print('[MAIN][ERROR]:Aplicatia nu a putut porni!')
+        exit(1)
+        
