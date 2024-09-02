@@ -1,0 +1,122 @@
+@startuml
+class Client_Messenger {
+    get_IPAddr()
+    parte_grafica_chat()
+    trimite_mesaje()
+    trimite_fisere()
+    trimite_emoji()
+    primeste_mesaje()
+    oprire_messenger()
+        fromLoginScreen
+    s
+    nume_in_aplicatie
+    nume_sv_fisiere
+    Interfata_OK
+    Functioneaza_Client
+    hostname
+    IPAddr
+    Chat_Window_root
+    Label_Chat
+    Chat_Text_Box
+    Label_Mesaj
+    Mesaj_Text_Box
+    lista_emoji_combobox
+    Buton_Trimite_Mesaj
+    Buton_Trimite_File
+    Buton_Log_Out
+    Interfata_OK
+    file_name
+    file
+    file_size
+    Functioneaza_Client
+    __init__()
+}
+class SQL_Lite_Connect {
+    db_connection()
+        connection
+    cursor
+    cursor_users
+    rezultat
+    __init__()
+}
+class GUI_Commands {
+    raise_frame()
+    stergeEntryLog()
+    stergeEntryReg()
+    logOut()
+    quit_mess()
+    show_password_frame2()
+    show_password_frame3()
+    show_password_frame4()
+        mainMenu
+    fromLoginScreen
+    fromRegisterScreen
+    fromChangePasswordScreen
+    __init__()
+}
+class GUI_Config {
+        OK_Log
+    NotOK_Log
+    App_Window_root
+    Ecran_meniu_frame1
+    Ecran_login_frame2
+    Ecran_register_frame3
+    Ecran_chngpass_frame4
+    __init__()
+}
+class Main_Screen {
+        mainMenu
+    guiCommand
+    dbConnection
+    Label_Welcome_frame1
+    Buton_Login_frame1
+    Buton_Register_frame1
+    Buton_Exit_frame1
+    Label_versiune_frame1
+    __init__()
+}
+class Login_Screen {
+    autentificare()
+    login()
+        mainMenu
+    guiCommand
+    dbConnection
+    Label_usernameLog_frame2
+    Entry_usernameLog_frame2
+    Label_passwordLog_frame2
+    Entry_passwordLog_frame2
+    Checkbutton_frame2
+    Label_Obligatoriu_frame2
+    Buton_link_frame2
+    Buton_Confirm_Login_frame2
+    Buton_Return_frame2
+    __init__()
+}
+class Regsiter_Screen {
+    register()
+        mainMenu
+    guiCommand
+    dbConnection
+    Label_usernameReg_frame3
+    Entry_usernameReg_frame3
+    Label_yourname_frame3
+    Entry_yourname_frame3
+    Label_passwordReg_frame3
+    Entry_passwordReg_frame3
+    Label_conpassword_frame3
+    Entry_conpassword_frame3
+    Checkbutton_frame3
+    Checkbutton_TrmsCondt_frame3
+    Label_Obligatoriu_frame3
+    Buton_Confirm_Reg_frame3
+    Buton_Return_frame3
+    __init__()
+}
+class Change_Password_Screen {
+    change_password()
+        mainMenu
+    guiCommand
+    dbConnection
+    __init__()
+}
+@enduml

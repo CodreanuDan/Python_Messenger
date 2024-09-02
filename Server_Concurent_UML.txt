@@ -1,0 +1,20 @@
+@startuml
+class ServerBroadcastService {
+    get_IPAddr()
+    init_server()
+    comunicare_globala()
+    manageClient()
+    stop_server()
+    start_server()
+        running
+    hostname
+    IPAddr
+    s
+    running
+    connection
+    cursor
+    running
+    t1
+    __init__()
+}
+@enduml
